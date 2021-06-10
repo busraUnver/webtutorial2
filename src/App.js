@@ -18,6 +18,14 @@ function App() {
           Learn React
         </a>
       </header>
+     
+      <script src="/__/firebase/8.6.5/firebase-app.js"></script>
+
+  
+      <script src="/__/firebase/8.6.5/firebase-analytics.js"></script>
+
+      
+      <script src="/__/firebase/init.js"></script>
     </div>
   );
 }
