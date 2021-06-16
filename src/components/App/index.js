@@ -15,7 +15,7 @@ import { withFirebase } from '../Firebase';
 class App extends Component {
   constructor(props) {
     super(props);
- 
+
     this.state = {
       authUser: null,
     };
@@ -33,15 +33,13 @@ class App extends Component {
   componentWillUnmount() {
     this.listener();
   }
- 
+
   render() {
     return (
       <Router>
         <div>
           <Navigation authUser={this.state.authUser} />
- 
-          <hr/>
-          
+
           <Route exact path={ROUTES.LANDING} component={LandingPage} />
           <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
           <Route path={ROUTES.SIGN_IN} component={SignInPage} />
@@ -49,7 +47,7 @@ class App extends Component {
           <Route path={ROUTES.HOME} component={HomePage} />
           <Route path={ROUTES.ACCOUNT} component={AccountPage} />
           <Route path={ROUTES.ADMIN} component={AdminPage} />
-          
+
         </div>
       </Router>
     );

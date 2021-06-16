@@ -28,7 +28,6 @@ const NavigationNonAuth = () => (
     <div style={styles.container} className="container">
         <a style={styles.brandStyle}
         className="brand" href="/accounts/">Bilkent University Online Services</a>
-
             <ul style={styles.linkButtonsStyle} className="pull-right nav" id="yw1" role="menu">
                 <a style={styles.textStyle} href="/accounts/site/language?language=tr"><i
                 className="icon-flag icon-white"/> Türkçe</a>
@@ -37,17 +36,14 @@ const NavigationNonAuth = () => (
                 <a style={styles.textStyle} href="/accounts/login"><i
                 className="icon-user icon-white"/> Login</a>
             </ul>
-
-
-  <ul>
-    <li style={styles.textStyle}>
-      <Link style={styles.textStyle} to={ROUTES.LANDING}>Landing</Link>
-    </li>
-    <li style={styles.textStyle}>
-      <Link style={styles.textStyle} to={ROUTES.SIGN_IN}>Sign In</Link>
-    </li>
-  </ul>
-
+        <ul>
+        <li style={styles.textStyle}>
+          <Link style={styles.textStyle} to={ROUTES.LANDING}>Landing</Link>
+        </li>
+        <li style={styles.textStyle}>
+          <Link style={styles.textStyle} to={ROUTES.SIGN_IN}>Sign In</Link>
+        </li>
+        </ul>
     </div>
 );
 

@@ -58,7 +58,7 @@ class SignInFormBase extends Component {
 
           <div style={styles.headerContainer}>
               <header>
-                  <img style={styles.logoStyle} src="../../bilkent-logo.jpg"/>
+                  <img style={styles.logoStyle} src="https://www.linkpicture.com/q/bilkent-logo.jpg" type="image"/>
                   <h1 style={styles.bilkentTitleStyle}>
                       Bilkent University
                       <span style={styles.subHeader} className="sub-header">Secure Login Gateway</span>
@@ -130,7 +130,6 @@ let styles = {
         display: 'wrap',
         //justifyContent: 'center',
         //alignItems: 'left',
-
     },
     legendStyle: {
         fontFamily: 'Arial',
@@ -142,6 +141,7 @@ let styles = {
         //lineHeight: 40,
         color: '#333',
         border: 0,
+        paddingTop: 30,
 
     },
     divBorder: {
