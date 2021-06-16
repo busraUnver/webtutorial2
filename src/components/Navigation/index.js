@@ -56,6 +56,7 @@ let styles = {
 
     },
     textStyle: {
+        display: "inline-block",
         color: "#ffffff",
         fontFamily: "Arial",
         textDecoration: 0,
