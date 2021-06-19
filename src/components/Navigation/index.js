@@ -2,24 +2,22 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import SignOutButton from '../SignOut';
+import { AuthUserContext } from '../Session';
 
-const Navigation = ({ authUser }) => (
-  <div>{authUser ? <NavigationAuth /> : <NavigationNonAuth />}</div>
+const Navigation = () => (
+  <div>
+    <AuthUserContext.Consumer>
+      {authUser =>
+        authUser ? <NavigationAuth /> : <NavigationNonAuth />
+      }
+    </AuthUserContext.Consumer>
+  </div>
 );
-
+//<SignOutButton />
 const NavigationAuth = () => (
-  <ul>
-    <li>
-      <Link to={ROUTES.LANDING}>Landing</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.HOME}>Home</Link>
-    </li>
-    <li>
-      <Link to={ROUTES.ACCOUNT}>Account</Link>
-    </li>
-    <li>
-      <SignOutButton />
+  <ul>  
+    <li >
+      <SignOutButton/>
     </li>
   </ul>
 );
@@ -31,17 +29,13 @@ const NavigationNonAuth = () => (
             <ul style={styles.linkButtonsStyle} className="pull-right nav" id="yw1" role="menu">
                 <a style={styles.textStyle} href="/accounts/site/language?language=tr"><i
                 className="icon-flag icon-white"/> Türkçe</a>
-                <a style={styles.textStyle} href="/accounts/reset-password"><i
-                className="icon-repeat icon-white"/> Reset password</a>
-                <a style={styles.textStyle} href="/accounts/login"><i
-                className="icon-user icon-white"/> Login</a>
             </ul>
         <ul>
         <li style={styles.textStyle}>
-          <Link style={styles.textStyle} to={ROUTES.LANDING}>Landing</Link>
+          <Link style={styles.textStyle} to={ROUTES.PASSWORD_FORGET}>Reset password</Link>
         </li>
         <li style={styles.textStyle}>
-          <Link style={styles.textStyle} to={ROUTES.SIGN_IN}>Sign In</Link>
+          <Link style={styles.textStyle} to={ROUTES.SIGN_IN}>Login</Link>
         </li>
         </ul>
     </div>

@@ -5,6 +5,7 @@ import { compose } from 'recompose';
 import { SignUpLink } from '../SignUp';
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
+import { PasswordForgetLink } from '../PasswordForget';
 
 
 const SignInPage = () => (
@@ -12,6 +13,7 @@ const SignInPage = () => (
     {/*<h1>SignIn</h1>*/}
     <h1/>
     <SignInForm />
+    <PasswordForgetLink />
     <SignUpLink />
   </div>
 );
@@ -88,7 +90,7 @@ class SignInFormBase extends Component {
         />
         <p id="LoginForm_username_em_" style={styles.helpBlockStyle} className="help-block">Bilkent ID cannot be blank.</p>
         <p style={styles.helpBlockStyle}
-           className="help-block"><span>Personnel ID number or Student ID number</span></p>
+           className="help-block"><span>Personel ID number or Student ID number</span></p>
 
         <label className="control-label required" htmlFor="LoginForm_password">
             <label style={styles.inputBlockStyle}
