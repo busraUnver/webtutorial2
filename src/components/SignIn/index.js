@@ -72,8 +72,8 @@ class SignInFormBase extends Component {
         </div>
 
         <label style={styles.inputBlockStyle}
-               className="control-label required" htmlFor="LoginForm_username">Bilkent ID
-            <span className="required">*</span>
+               className="control-label required" htmlFor="LoginForm_username">Bilkent ID .
+            <span className="required"></span>
         </label>
 
         <span style={styles.addOnStyle}
@@ -93,8 +93,8 @@ class SignInFormBase extends Component {
         <label className="control-label required" htmlFor="LoginForm_password">
             <label style={styles.inputBlockStyle}
               htmlFor="LoginForm_password" className="required">
-              Password
-              <span className="required">*</span>
+              Password .
+              <span className="required"></span>
           </label>
         </label>
 
@@ -114,9 +114,9 @@ class SignInFormBase extends Component {
             className="btn btn-bilkent" type="submit" name="yt0">Login
         </button>
 
-        <button disabled={isInvalid} type="submit">
+        /*<button disabled={isInvalid} type="submit">
           Sign In
-        </button>
+        </button>*/}
 
         <div style={styles.alertErrorStyle} className="alert alert-error">
           <p>If you are having problems logging in, please check the time zone setting on your computer.</p>

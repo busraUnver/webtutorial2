@@ -37,9 +37,9 @@ const NavigationNonAuth = () => (
                 className="icon-user icon-white"/> Login</a>
             </ul>
         <ul>
-        <li style={styles.textStyle}>
+        {/*<li style={styles.textStyle}>
           <Link style={styles.textStyle} to={ROUTES.LANDING}>Landing</Link>
-        </li>
+        </li>*/}
         <li style={styles.textStyle}>
           <Link style={styles.textStyle} to={ROUTES.SIGN_IN}>Sign In</Link>
         </li>
