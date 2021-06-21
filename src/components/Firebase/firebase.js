@@ -1,5 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
+import React from "react";
+import { useHistory } from "react-router-dom";
 
 const config = {
     apiKey: "AIzaSyDMyfErURClky958IDtMeENmuRqGpBJcFQ",
@@ -21,8 +23,12 @@ const config = {
 
     doSignInWithEmailAndPassword = (email, password) =>
     this.auth.signInWithEmailAndPassword(email, password);
-
-    doSignOut = () => this.auth.signOut();
+    
+    //this.auth.signOut();
+    doSignOut = () => {
+      
+      this.auth.signOut();
+    };
 
     doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
  
